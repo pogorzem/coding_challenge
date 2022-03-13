@@ -1,4 +1,4 @@
-# Codding Chalange
+# Coding Chalange
 
 ## Prepair Environment
 I choose [POETRY](https://python-poetry.org/docs/) to manage project, because it stores all dependencies of the packages with the versions so I can be sure that created environment will be exactly the same.
