@@ -21,7 +21,7 @@ out = (
     .collect()
 )
 
-# creat output dict
+# create output dict
 out_dict = out[0].asDict()
 
 # save to file
