@@ -8,10 +8,10 @@ output_file = "../out/out_1_2b.txt"
 spark = SparkSession.builder.appName("task1_2").getOrCreate()
 sc = spark.sparkContext
 rdd = sc.textFile(source_file)
-f1 = rdd.flatMap(lambda x: x.split(","))
+out = rdd.flatMap(lambda x: x.split(","))
 
 # total count of products
-count = f1.count()
+count = out.count()
 
 # save output to single file
 with open(output_file, "w") as f:

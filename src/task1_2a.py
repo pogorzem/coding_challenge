@@ -8,10 +8,10 @@ output_file = "../out/out_1_2a.txt"
 spark = SparkSession.builder.appName("task1_2a").getOrCreate()
 sc = spark.sparkContext
 rdd = sc.textFile(source_file)
-f1 = rdd.flatMap(lambda x: x.split(","))
+out = rdd.flatMap(lambda x: x.split(","))
 
 # collect unique product list
-unique_list = f1.distinct().collect()
+unique_list = out.distinct().collect()
 
 # save to single file
 with open(output_file, "w") as f:
